@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Nav } from "./Nav"
+import { Logout } from "../utils/Logout"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -32,6 +33,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <Nav />
+      <Logout />
     </div>
   </header>
 )
