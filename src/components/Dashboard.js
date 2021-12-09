@@ -8,7 +8,7 @@ export const Dashboard = () => {
   const { isConfirmedUser, authedFetch } = useIdentityContext()
   const [msg, setMsg] = useState("Click to load something")
   const handler = () => {
-    authedFetch.get("/.netlify/functions/test").then(setMsg)
+    authedFetch.get("/.netlify/functions/identity").then(setMsg)
   }
   return (
     <div>
