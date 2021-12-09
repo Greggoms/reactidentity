@@ -6,7 +6,7 @@ import { Nav } from "./Nav"
 import { Logout } from "../utils/Logout"
 
 const Header = ({ siteTitle }) => {
-  const { isLoggedIn } = useIdentityContext()
+  const { isLoggedIn, isConfirmedUser } = useIdentityContext()
   return (
     <header
       style={{
