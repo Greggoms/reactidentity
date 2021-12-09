@@ -1,7 +1,14 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import React from "react"
+import Layout from "./src/components/layout"
+import { IdentityContextProvider } from "react-netlify-identity"
 
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element, props }) => {
+  const url = "https://reactidentity.netlify.app"
+  return (
+    <>
+      <IdentityContextProvider url={url}>
+        <Layout {...props}>{element}</Layout>
+      </IdentityContextProvider>
+    </>
+  )
+}
