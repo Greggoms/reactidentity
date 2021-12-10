@@ -3,6 +3,12 @@ import { useIdentityContext } from "react-netlify-identity"
 
 // log out user
 export const Logout = () => {
-  const { logoutUser } = useIdentityContext()
-  return <button onClick={logoutUser}>You are signed in. Log Out</button>
+  const { logoutUser, user } = useIdentityContext()
+  console.log(user)
+  return (
+    <p style={{ marginBottom: 0 }}>
+      Welcome {"user"}
+      <button onClick={logoutUser}>Log Out</button>
+    </p>
+  )
 }
